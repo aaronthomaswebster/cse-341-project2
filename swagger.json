@@ -5,9 +5,9 @@
     "description": "An API for managing your users",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "cse-341-project2-38d5.onrender.com",
   "basePath": "/",
-  "schemes": ["http"],
+  "schemes": ["https"],
   "paths": {
     "/books/": {
       "get": {
