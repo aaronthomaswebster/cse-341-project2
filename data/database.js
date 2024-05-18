@@ -31,7 +31,7 @@ const initDb = async ( callback) => {
     models['review'] = mongoose.model('review',{
         review_id: { type: String, unique: true },
         user_name: { type: String, required: true},
-        book_id: { type: String, required: true, ref: 'book' }, // Change 'Item' to the actual referenced collection name, e.g., 'Book'
+        book_id: {type: mongoose.Schema.Types.ObjectId, ref: 'book'}, // Change 'Item' to the actual referenced collection name, e.g., 'Book'
         rating: { type: Number, min: 1, max: 5, required: true },
         comment: { type: String, required: true },
         created_at: { type: Date, default: Date.now },
